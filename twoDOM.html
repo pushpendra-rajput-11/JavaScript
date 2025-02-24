@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM with Chai aur Code</title>
+
+</head>
+<body style="background-color: black;color: aqua;">
+    <div class="parent">
+        <div class="one">Monday</div>
+        <div class="two">Tuesday</div>
+        <div class="three">Wednesday</div>
+        <div class="four">Thursday</div>
+        <div class="five">Friday</div>
+    </div>
+    <script>
+        const week = document.querySelector(".parent")
+       console.log(week);
+       console.log(week.children[1].innerHTML);
+        
+        for(let i= 0; i < week.children.length; i++){
+            const ele = week.children[i];
+             console.log(week.children[i].innerHTML);
+        }
+        week.children[0].style.color = "green"
+        week.children[1].style.color = "white"
+        week.children[2].style.color = "orange"
+
+       console.log(week.firstElementChild);
+       console.log(week.lastElementChild);
+
+        const dayone = document.querySelector(".parent")
+       console.log(dayone);
+       console.log(dayone.parentElement);
+       console.log(dayone.nextElementSibling);
+
+       console.log("NODES:",week.childNodes)
+    </script>
+</body>
+</html>
